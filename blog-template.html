@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Template</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/blog-template.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Remix Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= Navbar ================= -->
+    <div id="navbar-container"></div>
+
+    <!-- ================= Age Verification ================= -->
+    <section id="agegate"></section>
+
+    <!-- ================= Blog Banner ================= -->
+    <section class="blog-banner">
+        <div class="blog-banner-inner">
+            <h1 class="blog-title">
+                Contra Costa Cannabis Access & Density Report 2026
+            </h1>
+        </div>
+    </section>
+
+    <!-- ================= Single Blog ================= -->
+    <section class="single-blog-page">
+
+        <div class="blog-inner-container">
+
+            <!-- Left Sidebar (Table of Contents) -->
+            <aside class="toc-container">
+                <!-- Dynamic TOC -->
+            </aside>
+
+            <!-- Blog Content -->
+            <main class="blog-diplay">
+                <!-- Dynamic Blog Content -->
+            </main>
+
+            <!-- Recent Posts -->
+            <aside class="recent-post">
+
+                <div class="blog-image">
+                    <img src="res/blog-image.webp" alt="Recent Blog">
+                </div>
+
+                <div class="blog-content">
+                    <!-- Dynamic Recent Posts -->
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+    <!-- ================= Footer ================= -->
+    <section id="footer-container"></section>
+
+    <!-- ================= Load Components ================= -->
+    <script>
+        // Navbar
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+                initMobileMenu();
+            });
+
+        // Footer
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+            });
+
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script/navabar.js"></script>
+    <script src="script/agegate.js"></script>
+
+</body>
+
+</html>
